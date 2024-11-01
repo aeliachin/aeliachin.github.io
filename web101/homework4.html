@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            width: 700px;
+            margin-bottom: 30px;
+        }
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .form-group label {
+
+            width: 120px;
+            margin-right: 10px;
+            text-align: right;
+            }
+        .form-group input,
+        .form-group select, 
+        .form-group textarea{ 
+            flex: o.5;       
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .form-group input[type="checkbox"],
+        .form-group input[type="radio"]{
+            flex: 0;
+            margin-right: 3px;
+        }
+        .form-group img{
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+        }
+        .form-group input[type="range"]{
+            width:auto;
+            margin-right: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">My information</div>
+        <form action="">
+            <div class="form-group">
+        <select name="city" id="">
+            <option value="misses">Ms</option>
+            <option value="mister">Mr</option>
+        
+          </select>
+        </div>
+        <br>
+        <div class="form-group"></div>
+          <label for="">Name：</label>
+        <input type="text"placeholder="Please enter your full name">
+        <br>
+
+        <label for="">Email：</label>
+        <input type="text"placeholder="Please enter your email">
+
+        <br>
+        <label for="">Phone：</label>
+        <input type="tel"placeholder="Please enter your tel.No.">
+        <br>
+        <label for="">City：</label><select name="city" id="">
+        <option value="essen">Essen</option>
+        <option value="berlin">Berlin</option>
+        <option value="duesseldorf">Duesseldorf</option>
+        </select>
+        <br><br><br>
+    </div>
+        
+      
+      
+      
+    <div class="container">
+        <div class="title">Order information</div>
+        <input type="checkbox"><img src="https://media.istockphoto.com/id/1989429236/de/foto/food-photography.jpg?s=1024x1024&w=is&k=20&c=oRD0E68I5PQndxuzgLzkelDcgkGU0WXP5YV4jbPJgJ8="style="width: 150px; height: 150px;"  alt="">
+        <input type="checkbox"><img src="https://media.istockphoto.com/id/1405876801/de/foto/knuspriger-h%C3%A4hnchenburger-mit-k%C3%A4se-tomaten-zwiebeln-und-gr%C3%BCnem-salat.jpg?s=1024x1024&w=is&k=20&c=FAetE49ARNkbsSybC4ZU6qK6YUm-Huc8QOrAS9b9E2w="style="width: 150px; height: 150px;"  alt="">
+        <input type="checkbox"><img src="https://media.istockphoto.com/id/1475632303/de/foto/hot-dog-mit-r%C3%B6stzwiebeln-essiggurken-relish-senf-und-ketchup.jpg?s=1024x1024&w=is&k=20&c=dlG0GXKlbc-ahMJDKOGFsrmFIY8I8rmIEQooA5mx9Wk="style="width: 150px; height: 150px;"  alt="">
+        <input type="checkbox"><img src="https://images.unsplash.com/photo-1578861256505-d3be7cb037d3?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" style="width: 150px; height: 150px;" alt="">
+        <br>
+        <label for="people">People (1 - 4): </label>
+        <input type="range" id="people" name="people" min="1" max="4" value="2" oninput="zhi(this.value)">
+        <span id="rangeValue">2</span>
+        <script>
+        function zhi(value) {
+            document.getElementById('rangeValue').textContent = value;
+        }
+        </script>
+        <br>
+                <label for="">Date：</label>
+            <input type="date">
+            <br>
+            <label for="">Time：</label>
+            <input type="time">
+            <br>
+            <label for="">Payment:</label>
+            <input type="radio" name='how to pay'>Master card
+            <input type="radio" name='how to pay'>Visa card
+            <input type="radio" name='how to pay'>Paypal
+            <br>
+            <label for="">Comments:</label>
+            <textarea name="textarea" rows="4" cols="50"placeholder="Please leave your comments"></textarea>
+        <br>
+        <input type="submit">
+        <input type="reset">
+            </form> 
+    </div>
+</body>
+</html>
